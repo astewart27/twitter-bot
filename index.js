@@ -17,6 +17,7 @@ T.get('search/tweets', params , function(err, data, response) {
         console.log(data);
         for(let i = 0; i < data.statuses.length; i++) {
             let id = {id: data.statuses[i].id_str};
+            // lets favorite the tweets
             T.post('favorites/create', id, function(err, res) {
                 if(!err) {
                     let username = res.user.screen_name;
