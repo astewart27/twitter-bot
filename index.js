@@ -24,7 +24,7 @@ T.get('search/tweets', params , function(err, data, response) {
                     let tweetId = res.id_str;
                     console.log(`Favorited: https://twitter.com/${username}/status/${tweetId}`);
                 } else {
-                    console.log(err[0].message);
+                    console.log(err.message);
                 }
             });
         }
