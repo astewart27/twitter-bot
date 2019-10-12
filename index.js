@@ -11,7 +11,7 @@ const params = {
 }
 
 
-//  search twitter for all tweets containing #reactjs
+//  search twitter for all tweets containing our query
 T.get('search/tweets', params , function(err, data, response) {
     if(!err){
         console.log(data);
